@@ -1,6 +1,7 @@
 // Variables
+// ---------
 
-// colors
+// Colors
 $black: #000000;
 $white: #ffffff;
 $dark-green: #00a413;
@@ -11,14 +12,33 @@ $hover-blue: #5252ff;
 $link-red: #ff0000;
 $hover-red: #ff5252;
 
+// Shadows
+$shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+
 // Selectors
+// ---------
 
 body {
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
     background: $white;
 }
 
+.container {
+    margin: auto;
+    max-width: 720px;
+}
+
 h1 {
-    color: $medium-green;
+    margin: 32px 32px 32px 48px;
+}
+
+h2 {
+    margin: 24px 24px 24px 48px;
+}
+
+h3 {
+    margin: 16px 16px 16px 48px;
 }
 
 p {
@@ -32,4 +52,31 @@ a, a:visited {
 
 a:hover {
     color: $hover-blue;
+}
+
+// Frames
+.frame-outer {
+    margin: 16px 0px 0px 0px;
+    border: 32px solid $medium-green;
+    border-top: 8px;
+    border-radius: 40px;
+    padding: 8px 0 0 0;
+    background: $medium-green;
+    box-shadow: $shadow;
+    text-shadow: $shadow;
+    color: $white;
+    
+    h3 {
+        margin: 0 0 20px 16px;
+        font-size: 32px;
+    }
+}
+
+.frame-inner {
+    padding: 1px 16px 16px 16px;
+    box-shadow: 0px 0px 0px 16px $light-green;
+    border-radius: 16px;
+    background: $white;
+    color: $black;
+    text-shadow: none;
 }
