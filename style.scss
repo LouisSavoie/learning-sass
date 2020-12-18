@@ -1,3 +1,6 @@
+// Partials
+@use '_partial';
+
 // Variables
 // ---------
 
@@ -7,10 +10,6 @@ $white: #ffffff;
 $dark-green: #00a413;
 $medium-green: #00bd16;
 $light-green: #00ec1b;
-$link-blue: #0000ff;
-$hover-blue: #5252ff;
-$link-red: #ff0000;
-$hover-red: #ff5252;
 
 // Shadows
 $shadow: 0px 0px 4px rgba(0, 0, 0, .5);
@@ -43,15 +42,6 @@ h3 {
 
 p {
     color: $black;
-}
-
-a, a:visited {
-    color: $link-blue;
-    text-decoration: none;
-}
-
-a:hover {
-    color: $hover-blue;
 }
 
 // Frames

@@ -1,0 +1,19 @@
+// Variables
+// ---------
+
+// Colors
+$link-blue: #0000ff;
+$hover-blue: #5252ff;
+
+// Selectors
+// ---------
+
+// Links
+a, a:visited {
+    color: $link-blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $hover-blue;
+}
