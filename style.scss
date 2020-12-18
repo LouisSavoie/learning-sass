@@ -1,5 +1,6 @@
 // Partials
 @use '_partial';
+@use 'sizes';
 
 // Variables
 // ---------
@@ -69,4 +70,11 @@ p {
     background: $white;
     color: $black;
     text-shadow: none;
+}
+
+// Module Sized div
+.module-sized {
+    height: sizes.$small;
+    width: sizes.$small;
+    background: $dark-green;
 }
