@@ -5,9 +5,46 @@
     </head>
     <body>
 
-        <h1>Hello World!</h1>
-        <p>Written in SASS!</p>
-        <a href="https://sass-lang.com/">Check it out.</a>
+        <div class="container">
+
+            <h1>Learning Sass!</h1>
+
+            <h2>Examples of Sass features</h2>
+
+            <div class="frame-outer">
+                <h3>This h3 is nested in the frame-outer!</h3>
+                <div class="frame-inner">
+                    <p>All the colors on this page are declaired as variables. Neat!</p>
+                    <a href="https://sass-lang.com/">The style for this link is from a partial file. These are great for modularity!</a>
+                </div>
+    
+            </div>
+
+            <h3>This h3 is not nested! That's why it's style is different.</h3>
+            <p>The div below is sized in the main style file by calling a variable in a module! sizes.$100 in _sizes.scss to be exact, making it 100 by 100 pixels.</p>
+            <div class="module-sized">
+
+                <p>Woah! It's also been rotated! That was done with a mixin. A block of CSS that I want to keep DRY. I just reference it in the div's selector and I can even pass it variables just like a function or method!</p>
+
+            </div>
+
+            <div id="extended-div">
+                <p>This text does not inherit any extended properties.</p>
+                <p id="text-extended">This text does inherit extended properties from %fancy-text!</p>
+                <p id="text-extended-black">This text also inherits properties from %fancy-text and has it's own color property making it black.</p>
+            </div>
+
+            <div class="article-container">
+                <article role="main">
+                    <h4>Operators</h4>
+                    Doing math in your CSS is very helpful. Sass has a handful of standard math operators like +, -, *, /, and %. In our example we're going to do some simple math to calculate widths for an aside & article.
+                </article>
+                <aside role="complementary">
+                    We've created a very simple fluid grid, based on 960px. Operations in Sass let us do something like take pixel values and convert them to percentages without much hassle.
+                </aside>
+            </div>
+
+        </div>
         
     </body>
 </html>

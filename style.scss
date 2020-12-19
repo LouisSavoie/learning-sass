@@ -1,15 +1,133 @@
-body {
+// Partials
+@use '_partial';
+@use 'sizes';
 
+// Variables
+// ---------
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+$dark-green: #00a413;
+$medium-green: #00bd16;
+$light-green: #00ec1b;
+
+// Shadows
+$shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+
+// Mixins
+// ------
+
+// Transform
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
+// Extends
+// -------
+
+// Fancy Text
+%fancy-text {
+    font-weight: bold;
+    text-shadow: -5px 5px 3px $dark-green;
+    letter-spacing: 2px;
+    color: rgb(165, 0, 200);
+}
+
+// Selectors
+// ---------
+
+body {
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    background: $white;
+}
+
+.container {
+    margin: auto;
+    max-width: 720px;
 }
 
 h1 {
+    margin: 32px 32px 32px 48px;
+}
 
+h2 {
+    margin: 24px 24px 24px 48px;
+}
+
+h3 {
+    margin: 16px 16px 16px 48px;
 }
 
 p {
-
+    color: $black;
 }
 
-a {
+// Frames
+.frame-outer {
+    margin: 16px 0px 0px 0px;
+    border: 32px solid $medium-green;
+    border-top: 8px;
+    border-radius: 40px;
+    padding: 8px 0 0 0;
+    background: $medium-green;
+    box-shadow: $shadow;
+    text-shadow: $shadow;
+    color: $white;
+    
+    h3 {
+        margin: 0 0 20px 16px;
+        font-size: 32px;
+    }
+}
 
+.frame-inner {
+    padding: 1px 16px 16px 16px;
+    box-shadow: 0px 0px 0px 16px $light-green;
+    border-radius: 16px;
+    background: $white;
+    color: $black;
+    text-shadow: none;
+}
+
+// Module Sized div
+.module-sized {
+    height: sizes.$small;
+    width: sizes.$small;
+    background: $dark-green;
+    @include transform(rotate(-45deg));
+}
+
+// Extened Text
+#text-extended {
+    @extend %fancy-text;
+}
+
+#text-extended-black {
+    @extend %fancy-text;
+    color: $black;
+}
+
+#extended-div {
+    margin-top: 200px;
+}
+
+// Operators
+// ---------
+
+.article-container {
+    width: 100%;
+}
+
+article[role="main"] {
+    float: left;
+    width: 500px / 720px * 100%;
+}
+  
+aside[role="complementary"] {
+    float: right;
+    width: 200px / 720px * 100%;
 }
