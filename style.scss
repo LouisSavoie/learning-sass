@@ -15,6 +15,16 @@ $light-green: #00ec1b;
 // Shadows
 $shadow: 0px 0px 4px rgba(0, 0, 0, .5);
 
+// Mixins
+// ------
+
+// Transform
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
 // Selectors
 // ---------
 
@@ -77,4 +87,5 @@ p {
     height: sizes.$small;
     width: sizes.$small;
     background: $dark-green;
+    @include transform(rotate(-45deg));
 }
