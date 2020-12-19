@@ -114,3 +114,20 @@ p {
 #extended-div {
     margin-top: 200px;
 }
+
+// Operators
+// ---------
+
+.article-container {
+    width: 100%;
+}
+
+article[role="main"] {
+    float: left;
+    width: 500px / 720px * 100%;
+}
+  
+aside[role="complementary"] {
+    float: right;
+    width: 200px / 720px * 100%;
+}
