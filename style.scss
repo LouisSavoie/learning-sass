@@ -25,6 +25,17 @@ $shadow: 0px 0px 4px rgba(0, 0, 0, .5);
     -moz-transform: $property;
 }
 
+// Extends
+// -------
+
+// Fancy Text
+%fancy-text {
+    font-weight: bold;
+    text-shadow: -5px 5px 3px $dark-green;
+    letter-spacing: 2px;
+    color: rgb(165, 0, 200);
+}
+
 // Selectors
 // ---------
 
@@ -88,4 +99,18 @@ p {
     width: sizes.$small;
     background: $dark-green;
     @include transform(rotate(-45deg));
+}
+
+// Extened Text
+#text-extended {
+    @extend %fancy-text;
+}
+
+#text-extended-black {
+    @extend %fancy-text;
+    color: $black;
+}
+
+#extended-div {
+    margin-top: 200px;
 }
